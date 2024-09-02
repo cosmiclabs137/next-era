@@ -1,24 +1,32 @@
+"use client";
+
 import Link from "next/link";
 import { Button, Typography } from "@mui/material";
+
+import AppContextProvider from "@/contexts/AppContextProvider";
 
 import styles from "./page.module.css";
 
 export default function Home() {
     return (
-        <main className={styles.main}>
-            <div className={styles.description}></div>
+        <AppContextProvider>
+            <main className={styles.main}>
+                <div className={styles.description}></div>
 
-            <div className={styles.center}>
-                <Typography variant="h2">Effective Rent Analysis</Typography>
-                <div>
-                    &nbsp; &nbsp;
-                    <Link href="/era">
-                        <Button variant="contained">Get Started!</Button>
-                    </Link>
+                <div className={styles.center}>
+                    <Typography variant="h2">
+                        Effective Rent Analysis
+                    </Typography>
+                    <div>
+                        &nbsp; &nbsp;
+                        <Link href="/era">
+                            <Button variant="contained">Get Started!</Button>
+                        </Link>
+                    </div>
                 </div>
-            </div>
 
-            <div className={styles.grid}></div>
-        </main>
+                <div className={styles.grid}></div>
+            </main>
+        </AppContextProvider>
     );
 }
