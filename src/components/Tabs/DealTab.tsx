@@ -12,11 +12,15 @@ import {
     TabPanel as MuiTabPanel,
 } from "@mui/lab";
 
+import DealForm from "../Forms/DealForm";
+
 const DealTab = () => {
     const [currentTabIndex, setCurrentTabIndex] = React.useState("0");
 
     const handleTabChange = (e: any, tabIndex: string) =>
         setCurrentTabIndex(tabIndex);
+
+    let dealId = 0;
 
     return (
         <Box sx={{ width: "100%", typography: "body1" }}>
@@ -31,7 +35,10 @@ const DealTab = () => {
                     justifyContent="center"
                     alignItems="flex-start"
                 >
-                    <TabPanels currentTabIndex={currentTabIndex} />
+                    <TabPanels
+                        currentTabIndex={currentTabIndex}
+                        dealId={dealId}
+                    />
                 </Grid>
             </TabContext>
         </Box>
@@ -63,9 +70,9 @@ interface TabPanelProps {
     style?: Record<string, string>;
 }
 
-const TabPanel = ({ children, value }: TabPanelProps) => {
+const TabPanel = ({ children, value, style }: TabPanelProps) => {
     return (
-        <MuiTabPanel value={value}>
+        <MuiTabPanel value={value} style={style}>
             <Grid
                 component="section"
                 item
@@ -89,15 +96,16 @@ const TabPanel = ({ children, value }: TabPanelProps) => {
 
 interface TabPanelsProps {
     currentTabIndex: string;
+    dealId: number;
 }
 
-const TabPanels = ({ currentTabIndex }: TabPanelsProps) => {
+const TabPanels = ({ currentTabIndex, dealId }: TabPanelsProps) => {
     return (
         <>
             {currentTabIndex === "0" && (
                 <TabPanel value="0">
-                    This is where the deal forms go
-                    {/* <DealForm dealId={dealId} /> */}
+                    {/* This is where the deal forms go */}
+                    <DealForm dealId={dealId} />
                     {/* <InputsContainer /> */}
                 </TabPanel>
             )}
