@@ -2,7 +2,11 @@ import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 interface CollapsibleProps {
-    children: React.ReactElement<any, any> | string | null;
+    children:
+        | React.ReactElement<any, any>[]
+        | React.ReactElement<any, any>
+        | string
+        | null;
     defaultExpanded: boolean;
     id: string;
     summary: string;
