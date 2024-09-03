@@ -6,15 +6,11 @@ import BasicInputsForm from "./BasicInputsForm";
 import ConcessionInputsForm from "./ConcessionInputsForm";
 import OtherInputsForm from "./OtherInputsForm";
 
-import { DealsContext } from "@/contexts/AppContextProvider";
-
 import DealMenu from "../Menus/DealMenu";
 import DealMetrics from "../Metrics/DealMetrics";
 
-// NOTE: this is a hack just to "get things working..."
-// We're going to fake the deal with the deal factory until
-// we get the "plumbing" (i.e., app context) properly working
-// Be warned
+import { DealsContext } from "@/contexts/AppContextProvider";
+
 import { dealFactory } from "@/utils";
 
 interface DealFormProps {
