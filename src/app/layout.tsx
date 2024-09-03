@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import theme from "../theme";
 
 import "./globals.css";
+import { CssBaseline } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <html lang="en">
             <AppRouterCacheProvider>
                 <ThemeProvider theme={theme}>
+                    <CssBaseline enableColorScheme />
                     <body className={inter.className}>{children}</body>
                 </ThemeProvider>
             </AppRouterCacheProvider>
