@@ -11,8 +11,6 @@ import DealMetrics from "../Metrics/DealMetrics";
 
 import { DealsContext } from "@/contexts/AppContextProvider";
 
-import { dealFactory } from "@/utils";
-
 interface DealFormProps {
     dealId: number;
     disable?: Record<string, boolean>;
