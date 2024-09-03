@@ -2,14 +2,14 @@
 
 import React from "react";
 
-import DealTab from "@/components/Tabs/DealTab";
+import DealTabsContainer from "@/components/Containers/DealTabsContainer";
 
 import styles from "@/app/page.module.css";
 
 const page = () => {
     return (
         <div className={styles.center}>
-            <DealTab />
+            <DealTabsContainer />
         </div>
     );
 };
