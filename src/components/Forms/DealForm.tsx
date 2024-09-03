@@ -26,10 +26,8 @@ const DealForm = ({
 
     const { deals, metrics, dealsDispatch, metricsDispatch } =
         React.useContext(DealsContext);
-    console.log("DealForm: ", metrics);
 
-    // // NOTE: this is a hack just to "get things working..."
-    const deal = [dealFactory(0)][dealId];
+    const deal = deals[dealId];
 
     const handleChange = (
         e: any,
