@@ -12,9 +12,9 @@ import {
     TabPanel as MuiTabPanel,
 } from "@mui/lab";
 
-import DealForm from "../Forms/DealForm";
+import DealFormsContainer from "../Containers/DealFormsContainer";
 
-const DealTab = () => {
+const DealTabs = () => {
     const [currentTabIndex, setCurrentTabIndex] = React.useState("0");
 
     const handleTabChange = (e: any, tabIndex: string) =>
@@ -104,9 +104,7 @@ const TabPanels = ({ currentTabIndex, dealId }: TabPanelsProps) => {
         <>
             {currentTabIndex === "0" && (
                 <TabPanel value="0">
-                    {/* This is where the deal forms go */}
-                    <DealForm dealId={dealId} />
-                    {/* <InputsContainer /> */}
+                    <DealFormsContainer />
                 </TabPanel>
             )}
 
@@ -134,4 +132,4 @@ const TabPanels = ({ currentTabIndex, dealId }: TabPanelsProps) => {
     );
 };
 
-export default DealTab;
+export default DealTabs;
