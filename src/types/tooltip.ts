@@ -20,12 +20,15 @@ export enum PlacementTypes {
     top = "top",
 }
 
+type AdornmentType =
+    | Partial<InputProps>
+    | Partial<FilledInputProps>
+    | Partial<OutlinedInputProps>
+    | undefined;
+
 export interface AdornmentProps {
-    AdornmentProps?:
-        | Partial<InputProps>
-        | Partial<FilledInputProps>
-        | Partial<OutlinedInputProps>
-        | undefined;
+    startAdornment?: AdornmentType;
+    endAdornment?: AdornmentType;
 }
 
 export interface InputWithTooltipProps {
