@@ -7,7 +7,7 @@ interface CollapsibleProps {
         | React.ReactElement<any, any>
         | string
         | null;
-    defaultExpanded: boolean;
+    defaultExpanded?: boolean;
     id: string;
     summary: string;
 }
