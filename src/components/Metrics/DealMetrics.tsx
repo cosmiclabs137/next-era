@@ -1,6 +1,6 @@
 import React from "react";
 
-import { IMetrics } from "@/@types/metrics";
+import { IMetrics } from "@/types/metrics";
 
 interface DealMetricsProps {
     metrics: IMetrics;
