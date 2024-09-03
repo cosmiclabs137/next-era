@@ -1,7 +1,7 @@
 import { IMetrics } from "./metrics";
 
 export interface IDeal {
-    id: number | string;
+    id: number;
     name: string;
     sqft: number;
     term: number;
