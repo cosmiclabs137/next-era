@@ -1,3 +1,10 @@
+import {
+    FilledInputProps,
+    InputProps,
+    OutlinedInputProps,
+    TextFieldVariants,
+} from "@mui/material";
+
 export enum PlacementTypes {
     bottom_end = "bottom-end",
     bottom_start = "bottom-start",
