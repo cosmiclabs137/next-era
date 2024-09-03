@@ -1,7 +1,7 @@
 import React from "react";
 
-import { DealsContextType, IDeal } from "@/@types/deals";
-import { IMetrics } from "@/@types/metrics";
+import { DealsContextType, IDeal } from "@/types/deals";
+import { IMetrics } from "@/types/metrics";
 
 import { dealFactory } from "@/utils";
 
